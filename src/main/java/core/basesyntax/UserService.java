@@ -6,8 +6,8 @@ public class UserService {
 
     public int getUserScore(String[] records, String email) {
 
-        for (String userRecords : records) {
-            String[] emailRecords = userRecords.split(":");
+        for (String userRecord : records) {
+            String[] emailRecords = userRecord.split(":");
             if (emailRecords[0].equals(email)) {
                 return Integer.parseInt(emailRecords[1]);
             }
